@@ -1,0 +1,167 @@
+body {
+  font-family: "Poppins", Arial;
+  background: #f5f7fa;
+  margin: 0;
+  padding: 0;
+}
+h4 {
+  color: rgb(0, 48, 60);
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 3%;
+  text-align: left;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-left: 80px;
+  margin-right: 80px;
+  margin-top: 10px;
+  border-radius: 16px;
+}
+
+.logo {
+  font-size: 24px;
+}
+
+.logo span {
+  color: rgb(0, 48, 60);
+  font-weight: 700;
+}
+
+.sec-heading {
+  color: white;
+  font-weight: 500;
+  font-size: 24px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+#taskCount {
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: 10px;
+  margin-right: 8px;
+  padding: 5px 10px;
+  border-radius: 16px;
+}
+.assigned-btn {
+  height: 20px;
+  width: 20px;
+  margin-top: 65px;
+  margin-right: 15px;
+}
+
+main {
+  width: 90%;
+  margin: auto;
+}
+
+.top-section {
+  display: flex;
+  gap: 40px;
+  margin: 15px 0;
+}
+.header-left {
+  display: flex;
+  gap: 10px;
+}
+
+.task-box,
+.info-box,
+.date-box {
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.task-box,
+.info-box {
+  display: flex;
+  background-color: rgb(244, 247, 255);
+}
+.info-box {
+  background: linear-gradient(
+    130.7deg,
+    rgb(55, 82, 253) 0.419%,
+    rgb(108, 127, 250) 52.66%,
+    rgb(155, 168, 248) 99.733%
+  );
+}
+.box-para {
+  opacity: 0.5;
+}
+
+.task-box h2 {
+  color: #2b50ed;
+}
+.whole-body {
+  display: flex;
+}
+.tasks {
+  display: grid;
+  grid-template-columns: repeat(3, 2fr);
+  gap: 15px;
+  margin-bottom: 15px;
+}
+.complete-box {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.task-card {
+  width: 320px;
+  background: white;
+  padding: 15px;
+  border-radius: 16px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.complete-btn {
+  background: #2b50ed;
+  width: 100px;
+  height: 40px;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.complete-btn:disabled {
+  background: #b0b8ff;
+  cursor: not-allowed;
+}
+
+.activity-log {
+  margin-top: 20px;
+  background: white;
+  padding: 15px;
+  height: 700px;
+  width: 240px;
+  border-radius: 16px;
+  margin-left: 10px;
+}
+
+#clearHistory {
+  background: #2b50ed;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#logContainer {
+  margin-top: 10px;
+}
