@@ -3,9 +3,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const tasksAssignedElement = document.getElementById("tasksAssigned");
     const logContainer = document.getElementById("logContainer"); 
     const completeButtons = document.querySelectorAll(".complete-btn");
-    const themeButton = document.querySelector(".header-right img:nth-child(3)"); // Theme button (colorful icon)
-    const body = document.body; // Get body element
-    const infoBox = document.querySelector(".info-box"); // Redirect button
+    const themeButton = document.querySelector(".header-right img:nth-child(3)"); 
+    const body = document.body; 
+    const infoBox = document.querySelector(".info-box"); 
 
     let totalTasks = completeButtons.length;
     let remainingTasks = totalTasks; 
@@ -31,26 +31,16 @@ document.addEventListener("DOMContentLoaded", function () {
             if (!button.disabled) {
                 completedTasks++;
                 remainingTasks--;
-
-                // Update UI
                 button.textContent = "Completed"; 
                 button.style.backgroundColor = "#ccc"; 
                 button.style.color = "#666"; 
                 button.disabled = true; 
-
-                // Update counters
                 tasksAssignedElement.textContent = remainingTasks;
                 taskCountElement.textContent = parseInt(taskCountElement.textContent) + 1;
-
-                // Add to activity log with real-time timestamp
                 const logEntry = document.createElement("p");
                 logEntry.textContent = `[${getCurrentTime()}] Task "${button.parentElement.parentElement.querySelector("h3").textContent}" marked as completed.`;
                 logContainer.appendChild(logEntry);
-
-                // Show alert for each task completion
                 alert(`Task "${button.parentElement.parentElement.querySelector("h3").textContent}" is completed!`);
-
-                // Final alert when all tasks are completed
                 if (completedTasks === totalTasks) {
                     setTimeout(() => {
                         alert("🎉 All tasks are successfully completed! Great job!");
@@ -59,13 +49,9 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     });
-
-    // Clear Activity Log
     document.getElementById("clearHistory").addEventListener("click", function () {
         logContainer.innerHTML = "";
     });
-
-    // Theme Switcher (Dark & Light Mode)
     themeButton.addEventListener("click", function () {
         if (!isDarkMode) {
             body.style.background = "linear-gradient(130.7deg, rgb(15, 23, 42) 0.419%, rgb(30, 41, 59) 52.66%, rgb(51, 65, 85) 99.733%)"; // Dark theme
@@ -74,8 +60,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         isDarkMode = !isDarkMode;
     });
-
-    // Redirect to Blog Page on Info Box Click
     infoBox.addEventListener("click", function () {
         window.location.href = "blog.html";
     });
